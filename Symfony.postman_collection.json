@@ -1,0 +1,374 @@
+{
+	"info": {
+		"_postman_id": "4b6729d8-1b4a-4ac1-9687-00418442f093",
+		"name": "Symfony",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"okhsat@gmail.com\",\n    \"password\":\"1234567\"\n}"
+				},
+				"url": {
+					"raw": "http://symfony.loc/api/login",
+					"protocol": "http",
+					"host": [
+						"symfony",
+						"loc"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NTI0MjkyMjAsImV4cCI6MTY1MjQzMjgyMCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoib2toc2F0QGdtYWlsLmNvbSJ9.BrtNFHBUaJDwxCw4FRwYkAxQPpKqKOFaGPU4Y2V9wFAZGLUfRpDTHBdu06Nnb7iqAKM59xaEak91JHfFpgiYF2L9h7HgOq3dcp3Ys2VRUBeUb7x3uLHZgSKcLQXmYlTUpKRaZq5pNr9ckOH4Th1MJF1bqwZ4uxzbR0XpxIRlu3y4O98AAC6gA4_22BOUp4N8y3OsSE3_LmAxrXK2FXx4oFeuE_sXedEAG8vAAlSm2-pzVIE00iW3vKU8UHEHP7Wqno8fRITZdYPvvBoT9mcKvtQ2J397m9IGY1PlrUZnI_U9NrNLDhq05zkZ7ZEwD5N0pLS5GQzvmEDwfclRbWI3rQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://symfony.loc/api/user",
+					"protocol": "http",
+					"host": [
+						"symfony",
+						"loc"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Okhtay Sattari\",\n    \"email\": \"okhsat@gmail.com\",\n    \"password\": \"1234567\"\n}"
+				},
+				"url": {
+					"raw": "http://symfony.loc/api/user",
+					"protocol": "http",
+					"host": [
+						"symfony",
+						"loc"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://symfony.loc/api/product/1",
+					"protocol": "http",
+					"host": [
+						"symfony",
+						"loc"
+					],
+					"path": [
+						"api",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NTI0MzIyMTksImV4cCI6MTY1MjQzNTgxOSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoib2toc2F0QGdtYWlsLmNvbSJ9.QQc0Hx1RQZx8sJ32Moy2CPVoYG0fRayxN6Ssi6b4D4wlgMqLBikKQBuZcrdXwwbvxXpz0E6bEu0gn2M8f4hJNV7neBkPu5QNFEUiD7x5l8cVeeUSRnPJU2CcNHbvXka0uvkXKE8pX3zpGRlTC1eQNUe-HImBlut2UOsCKG2mMEon0BsGMNQt6o5CZ5pGnG-DjxbXr4zqRyo4hDsh6MCukUUawV4W2STG91O-SXNybsq7gPvQKE-EraUKhBJq2kHnSVQDwZ3IjFfn2bAeIr6bbrgMyo7SG6aD8yel_DKZIAebpX43UiC_JQiHvnPeNSF75hEEwZp83WLCURyHKIUJ1g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Glass\",\n    \"price\": 37.59,\n    \"stock\": 245,\n    \"description\": \"Kristal Glass\"\n}"
+				},
+				"url": {
+					"raw": "http://symfony.loc/api/product",
+					"protocol": "http",
+					"host": [
+						"symfony",
+						"loc"
+					],
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NTI0NTk5MDYsImV4cCI6MTY1MjQ2MzUwNiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoib2toc2F0QGdtYWlsLmNvbSJ9.M6IfjvzwIirdvK_WzVJO8K7JJorxWv_zR8tWt_je_xnZL54YqpelcLuC4sjzNXMsxWJ4Q1YPZrUiKzmoBXZ9n49HwfFcRhArUtAUi0dsHUm_0OSm-TPYWWNedAh-PQtNtPt5ya6s2sOmShhA3P140JGJZkUMa-9kUHnUH_VrwGRN6zdlIrDN6hzP8YUx3z8eSdHLomuL0kXA2mUpbncxVaxeH_fKWlue2pKuKO6eRTptktJmo-LCgnGip4DWLVmoEWYiKlJKlazg0tN_6T8oOPPtWKk6HVj-j1f4P3IeRqrJahDPmHFEmqaYoN02Geod1aioVali5I_rZSYsDxdgRw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://symfony.loc/api/order/1",
+					"protocol": "http",
+					"host": [
+						"symfony",
+						"loc"
+					],
+					"path": [
+						"api",
+						"order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NTI0NjM1MjEsImV4cCI6MTY1MjQ2NzEyMSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoib2toc2F0QGdtYWlsLmNvbSJ9.ZDIEcuoP8LBaYI2BZWDC76I7thnEu-6MxvmoqGvezV9374kMvBVDyHUp_xkkbBltbIXaSSEQ9_x4PV7lZ82gQw7Rto5GxqnyUa_m5efi3GU-xdjRZyrTiYVsTEtbNX_iz0YEdgE8oWmeE2C3lnl6aanufq57ME2VPo_mYFSoqHZY89N3SoZ4U05JjVLvc1BRWAz1xkgsKCSXnA-1_xQ4My8yqRgRkJE97-c7pI5wvszbObTUzji9Mi1bWNPtUdcKaMvzPZ04kaIaHan0_EE7IRDRBkhoELxxoGS6jkRYLRekfHv3dYS_u3Ok67MlKe-ak-BWDzNEQWIK9QSJ33wsPg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://symfony.loc/api/orders",
+					"protocol": "http",
+					"host": [
+						"symfony",
+						"loc"
+					],
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NTI0NTk5MDYsImV4cCI6MTY1MjQ2MzUwNiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoib2toc2F0QGdtYWlsLmNvbSJ9.M6IfjvzwIirdvK_WzVJO8K7JJorxWv_zR8tWt_je_xnZL54YqpelcLuC4sjzNXMsxWJ4Q1YPZrUiKzmoBXZ9n49HwfFcRhArUtAUi0dsHUm_0OSm-TPYWWNedAh-PQtNtPt5ya6s2sOmShhA3P140JGJZkUMa-9kUHnUH_VrwGRN6zdlIrDN6hzP8YUx3z8eSdHLomuL0kXA2mUpbncxVaxeH_fKWlue2pKuKO6eRTptktJmo-LCgnGip4DWLVmoEWYiKlJKlazg0tN_6T8oOPPtWKk6HVj-j1f4P3IeRqrJahDPmHFEmqaYoN02Geod1aioVali5I_rZSYsDxdgRw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"product_id\": 1,\n    \"quantity\": 4,\n    \"full_address\": \"Shishli, Istanbul.\"\n}"
+				},
+				"url": {
+					"raw": "http://symfony.loc/api/order",
+					"protocol": "http",
+					"host": [
+						"symfony",
+						"loc"
+					],
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NTI0NTk5MDYsImV4cCI6MTY1MjQ2MzUwNiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoib2toc2F0QGdtYWlsLmNvbSJ9.M6IfjvzwIirdvK_WzVJO8K7JJorxWv_zR8tWt_je_xnZL54YqpelcLuC4sjzNXMsxWJ4Q1YPZrUiKzmoBXZ9n49HwfFcRhArUtAUi0dsHUm_0OSm-TPYWWNedAh-PQtNtPt5ya6s2sOmShhA3P140JGJZkUMa-9kUHnUH_VrwGRN6zdlIrDN6hzP8YUx3z8eSdHLomuL0kXA2mUpbncxVaxeH_fKWlue2pKuKO6eRTptktJmo-LCgnGip4DWLVmoEWYiKlJKlazg0tN_6T8oOPPtWKk6HVj-j1f4P3IeRqrJahDPmHFEmqaYoN02Geod1aioVali5I_rZSYsDxdgRw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"product_id\": 1,\n    \"quantity\": 5,\n    \"full_address\": \"Kartal, Istanbul.\"\n}"
+				},
+				"url": {
+					"raw": "http://symfony.loc/api/order/1",
+					"protocol": "http",
+					"host": [
+						"symfony",
+						"loc"
+					],
+					"path": [
+						"api",
+						"order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

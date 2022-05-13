@@ -28,3 +28,23 @@ get-product:
   path: /api/product/{id}
   controller: App\Controller\ProductController::show
   methods: GET
+
+create-order:
+  path: /api/order
+  controller: App\Controller\OrderController::create
+  methods: POST
+
+list-orders:
+  path: /api/orders
+  controller: App\Controller\OrderController::list
+  methods: GET
+
+get-order:
+  path: /api/order/{id}
+  controller: App\Controller\OrderController::show
+  methods: GET
+
+update-order:
+  path: /api/order/{id}
+  controller: App\Controller\OrderController::update
+  methods: PUT

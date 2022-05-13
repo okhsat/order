@@ -18,7 +18,7 @@ class ProductController extends AbstractController
     {
         $product = $productRepository->find($id);
         
-        if (!$product) {
+        if ( ! $product ) {
             throw $this->createNotFoundException('No product found for id '.$id);
         }
         

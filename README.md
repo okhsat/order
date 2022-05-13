@@ -2,7 +2,7 @@
 
 Register: POST /api/user
 
-login: POST /api/login
+Login: POST /api/login
 
 Current User: GET /api/user - Bearer Token
 

@@ -6,18 +6,25 @@ kernel:
     resource: ../src/Kernel.php
     type: annotation
 
-api_login_check:
-    path: /api/login_check
+login:
+    path: /api/login
 
 register:
-  path: /register
-  controller: App\Controller\UserController::register
+  path: /api/user
+  controller: App\Controller\UserController::create
   methods: POST
 
-login:
-  path: /login
-  controller: App\Controller\UserController::login
+user:
+  path: /api/user
+  controller: App\Controller\UserController::show
+  methods: GET
 
-api:
-  path: /v1
-  controller: App\Controller\AuthController::api
+create-product:
+  path: /api/product
+  controller: App\Controller\ProductController::create
+  methods: POST
+
+get-product:
+  path: /api/product/{id}
+  controller: App\Controller\ProductController::show
+  methods: GET
